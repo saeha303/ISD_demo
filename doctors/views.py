@@ -168,3 +168,8 @@ class resident_status_view(View):
     def get(self, request, *args, **kwargs):
         members=self.getMembers()
         return render(request, self.template_name, {'members': members})
+class Home(View):
+    template_name = 'doctors/home.html'  # Update with your actual template name
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
